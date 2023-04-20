@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+<body>
+        {% if dept %}
+        <h3 class="page-header text-primary text-center">View File</h3>
+        <br />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="text-align:center">S.No</th>
+                    <th>Dept_id</th>
+                    <th>Dept_name</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {% for data in dept %}
+                <tr>
+                    <td style="text-align:center">{{forloop.counter}}</td>
+                    <td>{{data.id}}</td>
+                    <td>{{data.department_name}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>Department not exist</p>
+        {% endif %}
+        <!-- new table -->
+        {% if emp %}
+        <h3 class="page-header text-primary text-center">View File</h3>
+        <br />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="text-align:center">S.No</th>
+                    <th>Emp_id</th>
+                    <th>First_name</th>
+                    <th>Last_name</th>
+                    <th>Dept_id</th>
+                </tr>
+            </thead>
+            {% for data in emp %}
+            <tbody>
+                <tr>
+                    <td style="text-align:center">{{forloop.counter}}</td>
+                    <td>{{data.id}}</td>
+                    <td>{{data.first_name}}</td>
+                    <td>{{data.last_name}}</td>
+                    <td>{{data.department_id_id}}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p>Employee not found</p>
+        {% endif %}
+        </div>
+        </div>
+</body>
+</html>
