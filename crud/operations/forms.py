@@ -12,5 +12,4 @@ class DeptForm(forms.ModelForm):
     class Meta:
         model = Department
         fields = "__all__"
-        
-#knxcz
+
